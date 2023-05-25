@@ -1,0 +1,70 @@
+.menu {
+  padding: 24px 0 25px;
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__navigation {
+    gap: 46px;
+  }
+  &__underline {
+    position: relative;
+  }
+  &__underline-agency::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    display: block;
+    background-color: $backgroud-color-active;
+    border-radius: 2px;
+    margin-top: 28px;
+    width: 53px;
+  }
+  &__underline-portfolio::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    display: block;
+    background-color: $backgroud-color-active;
+    border-radius: 2px;
+    margin-top: 28px;
+    width: 58px;
+  }
+  &__navigation-link {
+    font-weight: 500;
+    line-height: 1.1;
+    color: $text-color-primary;
+    font-size: $font-size-primary;
+
+    &:hover {
+      color: $text-color-active;
+    }
+  }
+  &__address {
+    gap: 50px;
+  }
+  &__address-container {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    fill: $icon-color-tertiary;
+    margin-right: 10px;
+  }
+  &__address-link {
+    font-weight: 500;
+    line-height: 1.1;
+    color: $text-color-tertiary;
+    font-size: $font-size-primary;
+  }
+  &__address-container:hover > svg *,
+  &__address-container:hover &__address-link,
+  &__address-container:hover {
+    fill: $text-color-active;
+    color: $text-color-active;
+    cursor: pointer;
+  }
+}

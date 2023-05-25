@@ -1,0 +1,66 @@
+.team {
+  background: $backgroud-color-quaternary;
+
+  &__header {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+  }
+  &__block {
+    background: $backgroud-color-secondary;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: 270px;
+  }
+  &__name {
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 30px;
+    text-align: center;
+    font-size: $font-size-secondary;
+    font-weight: $font-weight-secondary;
+  }
+  &__jobtitle {
+    color: $text-color-tertiary;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: $font-size-secondary;
+    font-weight: $font-weight-primary;
+  }
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 44px;
+    height: 44px;
+
+    &:hover > svg *,
+    &:hover {
+      border-radius: 50px;
+      background-color: $backgroud-color-active;
+      fill: $icon-color-quaternary;
+    }
+  }
+  &__icon {
+    fill: #afb1b8;
+    cursor: pointer;
+  }
+}
