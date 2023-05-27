@@ -1,31 +1,108 @@
-.advantages {
-  padding-top: 94px;
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    align-items: center;
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-top: 94px;
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+    &__iconbox {
+      background-color: $backgroud-color-quaternary;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+    &__icon {
+      margin: 25px 0;
+    }
+    &__header {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.1;
+    }
+    &__description {
+      color: $text-color-tertiary;
+      font-weight: $font-weight-primary;
+      font-size: 14px;
+      line-height: 1.7;
+      padding-top: 10px;
+    }
   }
-  &__iconbox {
-    background-color: $backgroud-color-quaternary;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    border-radius: 4px;
+}
+@media screen and (max-width: 480px) {
+  .advantages {
+    padding: 60px 0;
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      margin: 0 15px;
+    }
+    &__iconbox {
+      background-color: $backgroud-color-quaternary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      border-radius: 4px;
+    }
+    &__icon {
+      margin: 25px 0;
+    }
+    &__header {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.1;
+      text-align: center;
+    }
+    &__description {
+      color: $text-color-tertiary;
+      font-weight: $font-weight-primary;
+      font-size: 14px;
+      line-height: 1.7;
+      padding-top: 10px;
+    }
   }
-  &__icon {
-    margin: 25px 0;
-  }
-  &__header {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.1;
-  }
-  &__description {
-    color: $text-color-tertiary;
-    font-weight: $font-weight-primary;
-    font-size: 14px;
-    line-height: 1.7;
-    padding-top: 10px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1199px) {
+  .advantages {
+    padding: 60px 0;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      li {
+        width: 354px;
+      }
+    }
+    &__iconbox {
+      background-color: $backgroud-color-quaternary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      border-radius: 4px;
+      width: 354px;
+    }
+    &__icon {
+      margin: 25px 0;
+    }
+    &__header {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.1;
+    }
+    &__description {
+      color: $text-color-tertiary;
+      font-weight: $font-weight-primary;
+      font-size: 14px;
+      line-height: 1.7;
+      padding-top: 10px;
+    }
   }
 }

@@ -1,34 +1,112 @@
-.clients {
-  &__header {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.1;
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  &__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-  &__block {
-    width: 170px;
-    height: 92px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+@media screen and (min-width: 1200px) {
+  .clients {
+    &__header {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.1;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+    &__block {
+      width: 170px;
+      height: 92px;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
 
-    &:hover > svg *,
-    &:hover {
-      border: 1px solid #2196f3;
-      fill: $backgroud-color-active;
+      &:hover > svg *,
+      &:hover {
+        border: 1px solid #2196f3;
+        fill: $backgroud-color-active;
+      }
+    }
+    &__icon {
+      fill: $icon-color-primary;
     }
   }
-  &__icon {
-    fill: $icon-color-primary;
+}
+@media screen and (max-width: 480px) {
+  .clients {
+    &__header {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.1;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 0 15px;
+    }
+    &__block {
+      width: 170px;
+      height: 92px;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:active > svg *,
+      &:active {
+        border: 1px solid #2196f3;
+        fill: $backgroud-color-active;
+      }
+    }
+    &__icon {
+      fill: $icon-color-primary;
+    }
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1199px) {
+  .clients {
+    &__header {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.1;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 0 15px;
+    }
+    &__block {
+      width: 226px;
+      height: 92px;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:active > svg *,
+      &:active {
+        border: 1px solid #2196f3;
+        fill: $backgroud-color-active;
+      }
+    }
+    &__icon {
+      fill: $icon-color-primary;
+    }
   }
 }

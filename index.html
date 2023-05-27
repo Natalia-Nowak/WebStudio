@@ -24,11 +24,21 @@
   <body>
     <header class="menu">
       <div class="container menu__container">
-        <nav class="menu__container">
+        <nav class="menu__container mobile-menu__container">
           <a class="logo" href="index.html"
             >Web<span class="logo-shadow">Studio</span></a
           >
-          <ul class="menu__container menu__navigation">
+          <button
+            type="button"
+            class="menu__button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="24px" height="16px" class="menu__button">
+              <use href="./images/icons.svg#icon-hamburger"></use>
+            </svg>
+          </button>
+          <ul class="menu__container-item menu__navigation">
             <li class="menu__underline menu__underline-agency">
               <a class="menu__navigation-link" href="index.html">Agencja</a>
             </li>
@@ -40,7 +50,7 @@
             <li><a class="menu__navigation-link" href="#">Kontakt</a></li>
           </ul>
         </nav>
-        <ul class="menu__container menu__address">
+        <ul class="menu__container-item menu__address">
           <li class="menu__address-container">
             <svg width="16px" height="12px" class="menu__icon">
               <use href="./images/icons.svg#icon-envelope-icon"></use>
@@ -186,6 +196,15 @@
             <li class="team__block">
               <img
                 src="images/team_member_1.jpg"
+                srcset="
+                  images/team_member_1_450.jpg    450w,
+                  images/team_member_1_450@2x.jpg 900w,
+                  images/team_member_1_354.jpg    354w,
+                  images/team_member_1_354@2x.jpg 708w,
+                  images/team_member_1_270.jpg    270w,
+                  images/team_member_1_270@2x.jpg 540w
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 alt="Team member"
                 width="270"
                 height="260"
@@ -227,6 +246,15 @@
               <img
                 src="images/team_member_2.jpg"
                 alt="Team member"
+                srcset="
+                  images/team_member_2_450.jpg    450w,
+                  images/team_member_2_450@2x.jpg 900w,
+                  images/team_member_2_354.jpg    354w,
+                  images/team_member_2_354@2x.jpg 708w,
+                  images/team_member_2_270.jpg    270w,
+                  images/team_member_2_270@2x.jpg 540w
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 width="270"
                 height="260"
               />
@@ -267,6 +295,15 @@
               <img
                 src="images/team_member_3.jpg"
                 alt="Team member"
+                srcset="
+                  images/team_member_3_450.jpg    450w,
+                  images/team_member_3_450@2x.jpg 900w,
+                  images/team_member_3_354.jpg    354w,
+                  images/team_member_3_354@2x.jpg 708w,
+                  images/team_member_3_270.jpg    270w,
+                  images/team_member_3_270@2x.jpg 540w
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 width="270"
                 height="260"
               />
@@ -307,6 +344,15 @@
               <img
                 src="images/team_member_4.jpg"
                 alt="Team member"
+                srcset="
+                  images/team_member_4_450.jpg    450w,
+                  images/team_member_4_450@2x.jpg 900w,
+                  images/team_member_4_354.jpg    354w,
+                  images/team_member_4_354@2x.jpg 708w,
+                  images/team_member_4_270.jpg    270w,
+                  images/team_member_4_270@2x.jpg 540w
+                "
+                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
                 width="270"
                 height="260"
               />
@@ -474,7 +520,85 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <!-- MENU MOBILE -->
+    <div class="js-menu-container" id="mobile-menu">
+      <div class="mobile-menu">
+        <nav>
+          <ul class="mobile-menu__navigation">
+            <li>
+              <a
+                class="mobile-menu__link mobile-menu__highlight"
+                href="index.html"
+                >Agencja</a
+              >
+            </li>
+            <li>
+              <a class="mobile-menu__link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li><a class="mobile-menu__link" href="#">Kontakt</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__addressbox">
+          <address>
+            <ul class="mobile-menu__address">
+              <li>
+                <a class="mobile-menu__tel" href="tel:48111111111"
+                  >+48 111 111 111</a
+                >
+              </li>
+              <li>
+                <a class="mobile-menu__mail" href="info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div>
+            <ul class="mobile-menu__sm">
+              <li><a class="mobile-menu__sm-link" href="#">Instagram</a></li>
+              <svg
+                width="1px"
+                height="22px"
+                class="mobile-menu__separator-icon"
+              >
+                <use href="./images/icons.svg#icon-separator"></use>
+              </svg>
+              <li><a class="mobile-menu__sm-link" href="#">Twitter</a></li>
+              <svg
+                width="1px"
+                height="22px"
+                class="mobile-menu__separator-icon"
+              >
+                <use href="./images/icons.svg#icon-separator"></use>
+              </svg>
+              <li><a class="mobile-menu__sm-link" href="#">Facebook</a></li>
+              <svg
+                width="1px"
+                height="22px"
+                class="mobile-menu__separator-icon"
+              >
+                <use href="./images/icons.svg#icon-separator"></use>
+              </svg>
+              <li><a class="mobile-menu__sm-link" href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <button class="mobile-menu__button js-close-menu">
+          <svg width="19px" height="19px" class="mobile-menu__close-icon">
+            <use href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
+    <!-- MODAL -->
+    <div class="is-hidden backdrop" data-modal>
       <div class="modal">
         <form class="modal__form">
           <h3 class="modal__header">Zostaw swoje dane w formularzu poniżej</h3>
@@ -517,7 +641,7 @@
                 value="1"
               />
               <label class="modal__checkbox-label" for="check"></label>
-              <div>
+              <div class="modal__checkbox-text">
                 Oświadczam iż akceptuję
                 <a class="modal__link" href="#">Regulamin</a> i
                 <a class="modal__link" href="#">Politykę Prywatności.</a>
