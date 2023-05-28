@@ -1,207 +1,94 @@
+.team {
+  margin-top: 60px;
+  background: $backgroud-color-quaternary;
+
+  &__header {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 0 15px;
+  }
+  &__block {
+    background: $backgroud-color-secondary;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__name {
+    font-weight: 500;
+    line-height: 1.1;
+    margin-top: 30px;
+    text-align: center;
+    font-size: $font-size-secondary;
+    font-weight: $font-weight-secondary;
+  }
+  &__jobtitle {
+    color: $text-color-tertiary;
+    line-height: 1.1;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: $font-size-secondary;
+    font-weight: $font-weight-primary;
+  }
+  &__social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 44px;
+    height: 44px;
+
+    &:active > svg *,
+    &:active {
+      border-radius: 50px;
+      background-color: $backgroud-color-active;
+      fill: $icon-color-quaternary;
+    }
+  }
+  &__icon {
+    fill: #afb1b8;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team {
+    &__list {
+      justify-content: center;
+    }
+    &__block {
+      max-width: 354px;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .team {
-    background: $backgroud-color-quaternary;
-
-    &__header {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.1;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    &__list {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      align-items: center;
-    }
     &__block {
-      background: $backgroud-color-secondary;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 0px 0px 4px 4px;
       width: 270px;
     }
-    &__name {
-      font-weight: 500;
-      line-height: 1.1;
-      margin-top: 30px;
-      text-align: center;
-      font-size: $font-size-secondary;
-      font-weight: $font-weight-secondary;
-    }
-    &__jobtitle {
-      color: $text-color-tertiary;
-      line-height: 1.1;
-      margin-top: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-      font-size: $font-size-secondary;
-      font-weight: $font-weight-primary;
-    }
-    &__social-media {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-    }
     &__link {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 30px;
-      width: 44px;
-      height: 44px;
-
       &:hover > svg *,
       &:hover {
         border-radius: 50px;
         background-color: $backgroud-color-active;
         fill: $icon-color-quaternary;
       }
-    }
-    &__icon {
-      fill: #afb1b8;
-      cursor: pointer;
-    }
-  }
-}
-@media screen and (max-width: 480px) {
-  .team {
-    margin-top: 60px;
-    background: $backgroud-color-quaternary;
-
-    &__header {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.1;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    &__list {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 30px;
-      align-items: center;
-      padding: 0 15px;
-    }
-    &__block {
-      background: $backgroud-color-secondary;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 0px 0px 4px 4px;
-    }
-    &__name {
-      font-weight: 500;
-      line-height: 1.1;
-      margin-top: 30px;
-      text-align: center;
-      font-size: $font-size-secondary;
-      font-weight: $font-weight-secondary;
-    }
-    &__jobtitle {
-      color: $text-color-tertiary;
-      line-height: 1.1;
-      margin-top: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-      font-size: $font-size-secondary;
-      font-weight: $font-weight-primary;
-    }
-    &__social-media {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-    }
-    &__link {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 30px;
-      width: 44px;
-      height: 44px;
-
-      &:active > svg *,
-      &:active {
-        border-radius: 50px;
-        background-color: $backgroud-color-active;
-        fill: $icon-color-quaternary;
-      }
-    }
-    &__icon {
-      fill: #afb1b8;
-      cursor: pointer;
-    }
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 1199px) {
-  .team {
-    background: $backgroud-color-quaternary;
-
-    &__header {
-      font-size: 36px;
-      font-weight: 700;
-      line-height: 1.1;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      padding: 0 15px;
-    }
-    &__block {
-      background: $backgroud-color-secondary;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 0px 0px 4px 4px;
-    }
-    &__name {
-      font-weight: 500;
-      line-height: 1.1;
-      margin-top: 30px;
-      text-align: center;
-      font-size: $font-size-secondary;
-      font-weight: $font-weight-secondary;
-    }
-    &__jobtitle {
-      color: $text-color-tertiary;
-      line-height: 1.1;
-      margin-top: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-      font-size: $font-size-secondary;
-      font-weight: $font-weight-primary;
-    }
-    &__social-media {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-    }
-    &__link {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 30px;
-      width: 44px;
-      height: 44px;
-
-      &:hover > svg *,
-      &:hover {
-        border-radius: 50px;
-        background-color: $backgroud-color-active;
-        fill: $icon-color-quaternary;
-      }
-    }
-    &__icon {
-      fill: #afb1b8;
-      cursor: pointer;
     }
   }
 }

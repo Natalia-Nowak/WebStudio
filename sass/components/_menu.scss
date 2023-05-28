@@ -1,107 +1,20 @@
-@media screen and (min-width: 1200px) {
-  .menu {
-    padding: 24px 0 25px;
-    border-bottom: 1px solid #ececec;
-
-    &__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    &__container-item {
-      display: flex;
-      justify-content: space-between;
-    }
-    &__navigation {
-      gap: 46px;
-    }
-    &__underline {
-      position: relative;
-    }
-    &__underline-agency::after {
-      content: "";
-      position: absolute;
-      height: 4px;
-      display: block;
-      background-color: $backgroud-color-active;
-      border-radius: 2px;
-      margin-top: 28px;
-      width: 53px;
-    }
-    &__underline-portfolio::after {
-      content: "";
-      position: absolute;
-      height: 4px;
-      display: block;
-      background-color: $backgroud-color-active;
-      border-radius: 2px;
-      margin-top: 28px;
-      width: 58px;
-    }
-    &__navigation-link {
-      font-weight: 500;
-      line-height: 1.1;
-      color: $text-color-primary;
-      font-size: $font-size-primary;
-
-      &:hover {
-        color: $text-color-active;
-      }
-    }
-    &__address {
-      gap: 50px;
-      display: flex;
-      justify-content: flex-start;
-    }
-    &__address-container {
-      display: flex;
-      align-items: center;
-    }
-    &__icon {
-      fill: $icon-color-tertiary;
-      margin-right: 10px;
-    }
-    &__address-link {
-      font-weight: 500;
-      line-height: 1.1;
-      color: $text-color-tertiary;
-      font-size: $font-size-primary;
-    }
-    &__address-container:hover > svg *,
-    &__address-container:hover &__address-link,
-    &__address-container:hover {
-      fill: $text-color-active;
-      color: $text-color-active;
-      cursor: pointer;
-    }
-    &__button {
-      display: none;
-    }
+.menu {
+  padding: 16px 23px 16px 15px;
+  border-bottom: 1px solid #ececec;
+  .logo {
+    font-size: 24px;
+  }
+  &__container-item {
+    display: none;
+  }
+  &__button {
+    fill: $icon-color-secondary;
+    background-color: $backgroud-color-secondary;
   }
 }
-
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) {
   .menu {
-    padding: 16px 23px 16px 15px;
-    .logo {
-      font-size: 24px;
-    }
-    &__address-container {
-      display: none;
-    }
-    &__navigation {
-      display: none;
-    }
-    &__button {
-      fill: $icon-color-secondary;
-      background-color: $backgroud-color-secondary;
-    }
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 1199px) {
-  .menu {
-    padding: 24px 0 25px;
+    padding: 24px 0 19px;
     border-bottom: 1px solid #ececec;
 
     &__container {
@@ -174,6 +87,89 @@
     &__address-container:active > svg *,
     &__address-container:active &__address-link,
     &__address-container:active {
+      fill: $text-color-active;
+      color: $text-color-active;
+      cursor: pointer;
+    }
+    &__button {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu {
+    padding: 24px 0 25px;
+    border-bottom: 1px solid #ececec;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__container-item {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__navigation {
+      gap: 46px;
+    }
+    &__underline {
+      position: relative;
+    }
+    &__underline-agency::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      display: block;
+      background-color: $backgroud-color-active;
+      border-radius: 2px;
+      margin-top: 28px;
+      width: 53px;
+    }
+    &__underline-portfolio::after {
+      content: "";
+      position: absolute;
+      height: 4px;
+      display: block;
+      background-color: $backgroud-color-active;
+      border-radius: 2px;
+      margin-top: 28px;
+      width: 58px;
+    }
+    &__navigation-link {
+      font-weight: 500;
+      line-height: 1.1;
+      color: $text-color-primary;
+      font-size: $font-size-primary;
+
+      &:hover {
+        color: $text-color-active;
+      }
+    }
+    &__address {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+    &__address-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &__icon {
+      fill: $icon-color-tertiary;
+      margin-right: 10px;
+    }
+    &__address-link {
+      font-weight: 500;
+      line-height: 1.1;
+      color: $text-color-tertiary;
+      font-size: $font-size-primary;
+    }
+    &__address-container:hover > svg *,
+    &__address-container:hover &__address-link,
+    &__address-container:hover {
       fill: $text-color-active;
       color: $text-color-active;
       cursor: pointer;
